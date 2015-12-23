@@ -29,9 +29,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmm-abl
 
-PRODUCT_PACKAGES += \
-    libloc_api_v02 \
-    libloc_ds_api
+#PRODUCT_PACKAGES += \
+#    libloc_api_v02 \
+#    libloc_ds_api
 
 PRODUCT_PACKAGES += \
     libtime_genoff \
@@ -46,7 +46,10 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PACKAGES += \
     libbtnv \
-    libqmi_cci \
-    libidl
-
+    libidl \
+    com.quicinc.cne \
+    com.quicinc.wbc \
+    com.quicinc.wbcservice \
+    org.codeaurora.Performance
+    
 $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor-blobs.mk)
