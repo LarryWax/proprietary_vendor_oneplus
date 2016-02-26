@@ -17,7 +17,6 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),oneplus2)
-ifeq ($(QCPATH),)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.location
@@ -33,11 +32,10 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := qcrilmsgtunnel
 LOCAL_MODULE_OWNER := oneplus
-LOCAL_SRC_FILES := proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+LOCAL_SRC_FILES := proprietary/app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_MODULE_CLASS := APPS
-LOCAL_PRIVILEGED_MODULE := true
 LOCAL_CERTIFICATE := platform
 include $(BUILD_PREBUILT)
 
@@ -108,6 +106,105 @@ LOCAL_MULTILIB := both
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libdiag
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libdiag.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libdiag.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libdsutils
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libdsutils.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libdsutils.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmdmdetect
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmdmdetect.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmdmdetect.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqcci_legacy
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqcci_legacy.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqcci_legacy.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmi
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmi.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmi.so
+LOCAL_ADDITIONAL_DEPENDENCIES := libdiag libqmi_client_qmux libdsutils libmdmdetect
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmi_client_qmux
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmi_client_qmux.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmi_client_qmux.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmiservices
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmiservices.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmiservices.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
 LOCAL_MODULE_OWNER := oneplus
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libtime_genoff.so
@@ -153,4 +250,4 @@ $(shell mkdir -p $(PRODUCT_OUT)/system/vendor/lib/egl && pushd $(PRODUCT_OUT)/sy
 $(shell mkdir -p $(PRODUCT_OUT)/system/vendor/lib64/egl && pushd $(PRODUCT_OUT)/system/vendor/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
 
 endif
-endif
+
