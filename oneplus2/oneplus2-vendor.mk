@@ -16,16 +16,49 @@
 
 # Pick up overlay for features that depend on non-open-source files
 PRODUCT_PACKAGES += \
-    com.qualcomm.location
-
-PRODUCT_PACKAGES += \
-    qcrilmsgtunnel \
+    a4wpservice \
+    com.quicinc.wbcserviceapp \
+    fastdormancy \
+    FingerprintServiceExtension \
+    QtiTelephonyService \
     shutdownlistener \
-    TimeService
+    TimeService \
+    WfdService
 
 PRODUCT_PACKAGES += \
+    cneapiclient \
+    con.qti.dpmframework \
+    com.qti.location.sdk \
+    com.qti.snapdragon.sdk.display \
+    con.qualcomm.location.vzw_library \
+    com.quicinc.cne \
+    com.quicinc.wbc \
+    com.quicinc.wbcservice \
+    ConnectivityExt \
+    dpmapi \
+    imscmlibrary \
     qcnvitems \
-    qcrilhook
+    qcrilhook \
+    qmapbridge \
+    QPerformance \
+    qti-telephony-common \
+    QtiTelepfonyServicelibrary \
+    rcsimssettings \
+    rcsservice \
+    tcmclient \
+    WfdCommon
+
+PRODUCT_PACKAGES += \
+    CNEService \
+    com.qualcomm.location \
+    dpmserviceapp \
+    qcrilmsgtunnel \
+    QtiTetherService
+
+PRODUCT_PACKAGES += \
+    ims \
+    imssettings \
+    SecProtect
 
 PRODUCT_PACKAGES += \
     libmm-abl
@@ -35,14 +68,12 @@ PRODUCT_PACKAGES += \
     libloc_ds_api
 
 PRODUCT_PACKAGES += \
-    libtime_genoff \
-    libTimeService \
-    libdiag \
-    libdsutils \
-    libmdmdetect \
-    libqcci_legacy \
-    libqmi \
-    libqmi_client_qmux \
-    libqmiservices
+    libtime_genoff
+    
+PRODUCT_BOOT_JARS += \
+    WfdCommon \
+    com.qti.dpmframework \
+    dpmapi \
+    com.qti.location.sdk    
 
 $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor-blobs.mk)
