@@ -19,7 +19,7 @@ PRODUCT_COPY_FILES += \
         vendor/oneplus/oneplus2/proprietary/bin/btnvtool:/system/bin/btnvtool \
         vendor/oneplus/oneplus2/proprietary/bin/cnd:/system/bin/cnd \
         vendor/oneplus/oneplus2/proprietary/bin/dpmd:/system/bin/dpmd \
-        vendor/oneplus/oneplus2/proprietary/bin/energy-awarness:/system/bin/energy-awarness \
+        vendor/oneplus/oneplus2/proprietary/bin/energy-awareness:/system/bin/energy-awarness \
         vendor/oneplus/oneplus2/proprietary/bin/hci_qcomm_init:/system/bin/hci_qcomm_init \
         vendor/oneplus/oneplus2/proprietary/bin/ipacm-diag:/system/bin/ipacm-diag \
         vendor/oneplus/oneplus2/proprietary/bin/irsc_util:/system/bin/irsc_util \
@@ -117,7 +117,7 @@ PRODUCT_COPY_FILES += \
         vendor/oneplus/oneplus2/proprietary/etc/permissions/telephonyservice.xml:/system/etc/permissions/telephonyservice.xml \
         vendor/oneplus/oneplus2/proprietary/etc/14049_ftm.conf:/system/etc/14049_ftm.conf \
         vendor/oneplus/oneplus2/proprietary/etc/capability.xml:/system/etc/capability.xml \
-        vendor/oneplus/oneplus2/proprietary/etc/mtconfig.inf:/system/etc/mtconfig.inf \
+        vendor/oneplus/oneplus2/proprietary/etc/mtconfig.ini:/system/etc/mtconfig.ini \
         vendor/oneplus/oneplus2/proprietary/etc/pp_calib_data_jd35695_1080p_cmd_mode_dsi_panel.xml:/system/etc/pp_calib_data_jd35695_1080p_cmd_mode_dsi_panel.xml \
         vendor/oneplus/oneplus2/proprietary/etc/wfdconfig.xml:/system/etc/wfdconfig.xml \
         vendor/oneplus/oneplus2/proprietary/etc/wfdconfigsink.xml:/system/etc/wfdconfigsink.xml \
@@ -133,7 +133,7 @@ PRODUCT_COPY_FILES += \
         vendor/oneplus/oneplus2/proprietary/lib/lib_fpc_tac_shared.so:/system/lib/lib_fpc_tac_shared.so \
         vendor/oneplus/oneplus2/proprietary/lib64/hw/fingerprint.msm8994.so:/system/lib64/hw/fingerprint.msm8994.so \
         vendor/oneplus/oneplus2/proprietary/lib64/hw/sensors.hal.tof.so:/system/lib64/hw/sensors.hal.tof.so \
-        vendor/oneplus/oneplus2/proprietary/lib64/hw/wbc_hal.default:/system/lib64/hw/wbc_hal.default \
+        vendor/oneplus/oneplus2/proprietary/lib64/hw/wbc_hal.default.so:/system/lib64/hw/wbc_hal.default.so \
         vendor/oneplus/oneplus2/proprietary/lib64/libcom_fingerprints_service.so:/system/lib64/libcom_fingerprints_service.so \
         vendor/oneplus/oneplus2/proprietary/lib64/lib_fpc_tac_shared.so:/system/lib64/lib_fpc_tac_shared.so \
         vendor/oneplus/oneplus2/proprietary/lib64/libloc_api_v02.so:/system/lib64/libloc_api_v02.so \
